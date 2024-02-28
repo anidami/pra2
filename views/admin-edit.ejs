@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+</head>
+<body>
+<h1>Edit Book</h1>
+
+<form action="/admin/update/<%= book._id %>" method="POST">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" value="<%= book.title %>" required>
+
+    <label for="author">Author:</label>
+    <input type="text" id="author" name="author" value="<%= book.author %>" required>
+
+    <label for="genre">Genre:</label>
+    <input type="text" id="genre" name="genre" value="<%= book.genre %>" required>
+
+    <label for="publicationYear">Publication Year:</label>
+    <input type="number" id="publicationYear" name="publicationYear" value="<%= book.publicationYear %>" required>
+
+    <label for="quantityAvailable">Quantity Available:</label>
+    <input type="number" id="quantityAvailable" name="quantityAvailable" value="<%= book.quantityAvailable %>" required>
+
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" step="0.01" value="<%= book.price %>" required>
+
+    <button type="submit">Update Book</button>
+</form>
+
+<a href="/admin">Cancel</a>
+</body>
+</html>
